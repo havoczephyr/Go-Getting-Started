@@ -11,6 +11,11 @@
   - [2-1](#installing-the-go-tools) **Installing and configuring Go**
   - [2-2](#overview-of-the-go-command) **Using the Go Command**
   - [2-4](#creating-a-project) **Creating a Project**
+- [3-0](#working-with-primative-data-types) **Working with Primative Data Types**
+  - [3-1](#declaring-variables-with-primative-data-types) **Declaring Variables with Primative Data Types**
+  - [3-2](#working-with-pointers) **Working with Pointers**
+  - [3-3](#creating-constants) **Creating Constants**
+  - [3-4](#using-iota-and-constant-expressions) **Using Iota and Constant Expressions**
 - [?-0](#additional-resources) **Additional Resources**
   - [?-1](#go-style-guide) **Go Style Guide**
 
@@ -204,6 +209,7 @@ some things to note, go comes pre packaged with testing commands, `get` helps yo
 
 ### **Creating a Project**
 [Back](#table-of-contents)
+
 As of Go 1.13 and Beyond, Modules are the official way to organize source code.
 
 Create a folder, inside the folder we need to initialize the module. we use a go.mod file similar to a requirements.txt or a package.json, in that it holds the build information of the project. for this example, it requires an argument to init so we will be using the one provided in the video
@@ -233,6 +239,20 @@ if we save and run this project using `go run github.com/pluralsight/webservice`
 **my own thoughts** this whole bit is so wierd, you can't run `go mod init` without a remote repo, why do I need to point to a remote repo to create a go.mod file? this whole bit doesn't make much sense to me.
 
 Okay, based on this url [here](https://www.digitalocean.com/community/tutorials/how-to-use-go-modules), you can make go modules local by just doing `go mod init moduleName`. I'll give it a try! aaand it worked!
+
+## **Working with Primative Data Types**
+
+### **Declaring Variables with Primative Data Types**
+[Back](#table-of-contents)
+
+### **Working with Pointers**
+[Back](#table-of-contents)
+
+### **Creating Constants**
+[Back](#table-of-contents)
+
+### **Using Iota and Constant Expressions**
+[Back](#table-of-contents)
 
 
 
