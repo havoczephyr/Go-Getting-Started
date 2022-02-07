@@ -232,6 +232,10 @@ if we save and run this project using `go run github.com/pluralsight/webservice`
 
 **my own thoughts** this whole bit is so wierd, you can't run `go mod init` without a remote repo, why do I need to point to a remote repo to create a go.mod file? this whole bit doesn't make much sense to me.
 
+Okay, based on this url [here](https://www.digitalocean.com/community/tutorials/how-to-use-go-modules), you can make go modules local by just doing `go mod init moduleName`. I'll give it a try! aaand it worked!
+
+
+
 
 ## **Additional Resources:**
 
