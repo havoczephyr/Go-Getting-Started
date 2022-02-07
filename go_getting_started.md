@@ -2,17 +2,15 @@
 ## By: Mike Van Sickle on Pluralsight
 
 
-Table of Contents:
+### **Table of Contents**
 - [1-0](#introduction) **Introduction**
   - [1-1](#language-characteristics) **Language Characteristics**
   - [1-2](#what-is-go-good-at) **What is Go good at?**
   - [1-3](#hello-world) **Hello World**
-  - [1-4](#course-outline) **Course Overview**
 - [2-0](#starting-a-project) **Starting a Project**
   - [2-1](#installing-the-go-tools) **Installing and configuring Go**
-  - [2-2] **Using the Go Command**
-  - [2-4] **Creating a Project**
-  - [2-5] **Summary**
+  - [2-2](#overview-of-the-go-command) **Using the Go Command**
+  - [2-4](#creating-a-project) **Creating a Project**
 - [?-0](#additional-resources) **Additional Resources**
   - [?-1](#go-style-guide) **Go Style Guide**
 
@@ -23,6 +21,7 @@ Table of Contents:
 ## **Introduction**:
 
 ### **Language Characteristics:**
+[Back](#table-of-contents)
 
 **The Problem**
 
@@ -48,6 +47,7 @@ Solution? Lets make GO
 - Simplicity as a core value
 
 ### **What is Go good at?:**
+[Back](#table-of-contents)
 
 - **Web Services/Applications**
   - Google handled mostly web solutions so it's standard library is built to handle those challenges.
@@ -57,6 +57,7 @@ Solution? Lets make GO
 - Machine Learning
 
 ### **Hello World:**
+[Back](#table-of-contents)
 
 ```go
 package main
@@ -129,18 +130,10 @@ func main();
 }
 ```
 
-### **Course Outline**
-
-- *Introduction (we are here)*
-- **Starting a Project (where we are going)**
-- Working with Primative Data Types
-- Working with Collection
-- Creating Functions and Methods
-- Controlling Program Flow
-
 ## **Starting a Project:**
 
 ### **Installing the Go Tools**
+[Back](#table-of-contents)
 
 - go to golang.org
   - documents section contains articles that can help learn go and its use cases.
@@ -150,6 +143,7 @@ func main();
 
 
 ### **Overview of the Go Command**
+[Back](#table-of-contents)
 
 now that we have the go tools installed, lets go to terminal and type `go` and hit enter:
 ```bash
@@ -208,10 +202,41 @@ Use "go help <topic>" for more information about that topic.
 
 some things to note, go comes pre packaged with testing commands, `get` helps you grab dependances, `install` helps install dependances. how neat!
 
+### **Creating a Project**
+[Back](#table-of-contents)
+As of Go 1.13 and Beyond, Modules are the official way to organize source code.
+
+Create a folder, inside the folder we need to initialize the module. we use a go.mod file similar to a requirements.txt or a package.json, in that it holds the build information of the project. for this example, it requires an argument to init so we will be using the one provided in the video
+```bash
+C:\code>go mod init github.com/pluralsight/webservice
+```
+by doing so it generates a file in your project folder:
+
+<img src='assets/golangNotes2.png'>
+
+inside it has the module it's pointing to and the version of go being used.
+
+into our `main.go` file, lets just make what we learned early, a basic hello world.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello from a module, Gophers!")
+}
+```
+
+if we save and run this project using `go run github.com/pluralsight/webservice` we will be able to run the application directly.
+
+**my own thoughts** this whole bit is so wierd, you can't run `go mod init` without a remote repo, why do I need to point to a remote repo to create a go.mod file? this whole bit doesn't make much sense to me.
+
 
 ## **Additional Resources:**
 
 ### **Go Style Guide**
+[Back](#table-of-contents)
 
 Found [this](https://github.com/uber-go/guide/blob/master/style.md) online, seems helpful.
 
