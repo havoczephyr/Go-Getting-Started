@@ -245,6 +245,46 @@ Okay, based on this url [here](https://www.digitalocean.com/community/tutorials/
 ### **Declaring Variables with Primative Data Types**
 [Back](#table-of-contents)
 
+writing variables:
+```go
+var i int
+i = 42
+```
+this is the verbose syntax of representing a variable.
+
+```go
+var f float32 = 3.14
+```
+we can define the variable within the same line. but we can go deeper.
+
+```go
+firstname := "Arthur"
+```
+by using walrus `:=`, we can trigger initialiation syntax and automatically define and initialize. based on the value given it will know what kind of typing to define it.
+
+if we try to define a variable, but then not use it. go will generate a compile error. unlike with unused packages, go will not delete the variable and its value, but it will just fail to compile and notify you.
+
+```bash
+PS C:\Users\HavocZephyr\...\GoModuleExample> go run goModExample
+# goModExample
+.\main.go:4:2: Tomato declared but not used
+```
+**my own thoughts** these compile errors are surprisingly human. I wonder if this is just how go errors are in general. it'll be nice to not have to yank out the wiki every time go gets upset.
+
+we have our usual data types
+- boolean
+  - `b := true` 
+  - although here we can definitely see that the T/F syntax for go is lowercase, not uppercase `True` `False` like in python/js
+- float32 & float64, based on the size of the float
+  - `c := 3.14159`
+- Integer
+  - `d := 4`
+- string
+  - `e := "e"
+  - I've noticed go does not like single quotes, it really wants to see double quotes.
+  - I found [this](https://blog.fireheart.in/a?ID=e90936fe-24de-4297-9b7a-d9b76cec5161) article on the subject, it appears that go specifically uses single quotes for single character entries :\ I wonder what this'll do to my projects if I have to embed code inside of strings.
+
+
 ### **Working with Pointers**
 [Back](#table-of-contents)
 
