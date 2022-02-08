@@ -280,7 +280,7 @@ we have our usual data types
 - Integer
   - `d := 4`
 - string
-  - `e := "e"
+  - `e := "e"`
   - I've noticed go does not like single quotes, it really wants to see double quotes.
   - I found [this](https://blog.fireheart.in/a?ID=e90936fe-24de-4297-9b7a-d9b76cec5161) article on the subject, it appears that go specifically uses single quotes for single character entries :\ I wonder what this'll do to my projects if I have to embed code inside of strings.
 
